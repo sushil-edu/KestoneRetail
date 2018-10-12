@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xperia.panks.retailmanagement.Attendance">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Click to checkin"
+        android:textColor="@color/grey"
+        android:textSize="20sp" />
+
+    <in.galaxyofandroid.widgets.AwesomeRelativeLayout
+        android:id="@+id/takeImgBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        app:arl_backgroundColor="@color/colorPrimary"
+        app:arl_borderColor="@color/colorPrimary"
+        app:arl_borderEnable="true"
+        app:arl_borderWidth="5"
+        app:arl_cornerRadius="200">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Take Picture to Check In"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </in.galaxyofandroid.widgets.AwesomeRelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/checkInBtn"
+        android:visibility="gone"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:id="@+id/attendanceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Check In"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+</LinearLayout>

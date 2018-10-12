@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">KestoneRetail</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Bottom navigation item-->
+    <string name="title_report">Report</string>
+    <string name="title_upload">Upload</string>
+    <string name="title_deviation">Deviation</string>
+    <string name="title_profile">Profile</string>
+
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item-->
+        <!--android:id="@+id/action_signout"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="Sign Out"-->
+        <!--app:showAsAction="never" />-->
+
+    <item
+        android:id="@+id/action_syncPJP"
+        android:orderInCategory="100"
+        android:title="Sync PJP"
+        android:icon="@drawable/ic_sync"
+        app:showAsAction="always" />
+
+    <!--<item-->
+        <!--android:id="@+id/report"-->
+        <!--app:showAsAction="ifRoom"-->
+        <!--android:icon="@drawable/ic_file"-->
+        <!--android:title="dailiy_report"-->
+        <!--/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/upload"-->
+        <!--app:showAsAction="ifRoom"-->
+        <!--android:icon="@drawable/ic_file_upload"-->
+        <!--android:title="Upload"-->
+        <!--/>-->
+</menu>

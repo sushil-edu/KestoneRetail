@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.kestone.kestoneretail"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 15
+        versionName "2.1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+allprojects {
+    repositories {
+
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.github.MdFarhanRaja:AwesomeWidgets:1.5'
+    compile 'com.master.android:permissionhelper:1.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.balysv:material-ripple:1.0.2'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.balysv:material-ripple:1.0.2'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+
+// dexter runtime permissions
+    implementation 'com.karumi:dexter:4.2.0'
+
+    testCompile 'junit:junit:4.12'
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            // Skip multidex because it follows a different versioning pattern.
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.0'
+            }
+        }
+    }
+}

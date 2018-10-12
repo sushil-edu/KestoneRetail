@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kestone.kestoneretail.MerchantDashBoard">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/deviationLin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Deviation"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/back_confirm"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/deviation"
+            android:tint="@color/white" />
+
+    </LinearLayout>
+    <include layout="@layout/bottom_navigation_merchant"/>
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/navigation"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--android:foreground="?attr/selectableItemBackground"-->
+        <!--app:itemBackground="@color/colorPrimaryDark"-->
+        <!--app:itemIconTint="@android:color/white"-->
+        <!--app:itemTextColor="@android:color/white"-->
+        <!--app:menu="@menu/navigation" />-->
+</RelativeLayout>
